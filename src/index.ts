@@ -1,9 +1,10 @@
 import { getQuote } from './quotes';
-import config from '../tariff.config';
+import { getConfig, setConfig, type TariffConfig } from './config';
 
 const delay = (ms: number): Promise<void> => new Promise((resolve) => setTimeout(resolve, ms));
 
 export async function imposeTariff(pkgName: string): Promise<any> {
+  const config = getConfig();
   const policy = config.policies?.[pkgName];
 
   if (!policy) return require(pkgName);
@@ -28,4 +29,5 @@ export async function imposeTariff(pkgName: string): Promise<any> {
   return require(pkgName);
 }
 
-export default { imposeTariff };
+export { setConfig, type TariffConfig };
+export default { imposeTariff, setConfig };

@@ -4,7 +4,7 @@ export const tsup: Options = {
   target: 'esnext',
   clean: true,
   dts: true,
-  entry: ['src/index.ts'],
+  entry: ['src/index.ts', 'src/config.ts'],
   keepNames: true,
   minify: true,
   sourcemap: true,
