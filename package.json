@@ -1,0 +1,70 @@
+{
+  "name": "great-tariff",
+  "version": "1.0.0",
+  "description": "A satirical NPM package that lets you apply fake tariffs to imported modules in your JavaScript project.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepack": "pnpm run build",
+    "typecheck": "tsc -p tsconfig.json",
+    "release": "semantic-release",
+    "release-test": "semantic-release --dry-run",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devmahmud/great-tariff.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "trump",
+    "tariff",
+    "parody",
+    "satire",
+    "npm-imports",
+    "make-imports-great-again",
+    "funny-node",
+    "meme-package",
+    "javascript-jokes",
+    "mock-imports",
+    "fake-tariff",
+    "npm-policy",
+    "presidential-package",
+    "node-humor",
+    "js-delay",
+    "import-blocker",
+    "comedy-code",
+    "npm-satire",
+    "great-tariff"
+  ],
+  "author": "Mahmudul Alam <expelmahmud@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devmahmud/great-tariff/issues"
+  },
+  "homepage": "https://github.com/devmahmud/great-tariff#readme",
+  "packageManager": "pnpm@10.6.5",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@types/node": "^22.14.1",
+    "axios": "^1.8.4",
+    "lodash": "^4.17.21",
+    "react": "^19.1.0",
+    "semantic-release": "^24.2.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}
